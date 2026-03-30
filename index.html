@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Goa Premium Trip 🌴</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #0f172a;
+    color: white;
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 40px;
+    background: rgba(0,0,0,0.6);
+    position: fixed;
+    width: 100%;
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+nav h2 {
+    color: #38bdf8;
+}
+
+nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: white;
+}
+
+/* Hero */
+.hero {
+    height: 100vh;
+    background: url('https://images.unsplash.com/photo-1512343879784-a960bf40e7f2') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+}
+
+.hero button {
+    margin-top: 20px;
+    padding: 12px 25px;
+    border: none;
+    background: #38bdf8;
+    color: black;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* Sections */
+section {
+    padding: 80px 40px;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2rem;
+    color: #38bdf8;
+}
+
+/* Cards */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #1e293b;
+    padding: 20px;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+/* Gallery */
+.gallery img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Form */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: auto;
+}
+
+input, textarea {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+button {
+    background: #38bdf8;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: black;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <h2>GoaX 🌴</h2>
+    <div>
+        <a href="#places">Places</a>
+        <a href="#plan">Plan</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Book</a>
+    </div>
+</nav>
+
+<div class="hero">
+    <div>
+        <h1>Experience Goa Like Never Before 😎</h1>
+        <button onclick="scrollToSection()">Explore</button>
+    </div>
+</div>
+
+<section id="places">
+    <h2 class="title">Top Places</h2>
+    <div class="cards">
+        <div class="card">🏖️ Baga Beach</div>
+        <div class="card">🌅 Anjuna Beach</div>
+        <div class="card">🏰 Fort Aguada</div>
+        <div class="card">🌊 Dudhsagar Falls</div>
+    </div>
+</section>
+
+<section id="plan">
+    <h2 class="title">3-Day Plan</h2>
+    <div class="cards">
+        <div class="card">Day 1 - Beach & Chill</div>
+        <div class="card">Day 2 - Adventure & Fort</div>
+        <div class="card">Day 3 - Shopping & Party</div>
+    </div>
+</section>
+
+<section id="gallery">
+    <h2 class="title">Gallery</h2>
+    <div class="cards gallery">
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e">
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e">
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e">
+    </div>
+</section>
+
+<section id="contact">
+    <h2 class="title">Book Your Trip</h2>
+    <form onsubmit="bookTrip(event)">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Email" required>
+        <textarea placeholder="Your Plan"></textarea>
+        <button type="submit">Book Now</button>
+    </form>
+</section>
+
+<footer>
+    <p>Made with ❤️ | Goa Premium Experience</p>
+</footer>
+
+<script>
+function scrollToSection() {
+    document.getElementById("places").scrollIntoView({ behavior: "smooth" });
+}
+
+function bookTrip(e) {
+    e.preventDefault();
+    alert("🎉 Booking Successful! We will contact you soon.");
+}
+</script>
+
+</body>
+</html>
